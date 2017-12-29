@@ -18,8 +18,8 @@ import com.rifqi.peminjamanbarang.Common.Common;
 import com.rifqi.peminjamanbarang.Model.User;
 
 public class SignIn extends AppCompatActivity {
-    private Button btnSignIn;
-    private MaterialEditText edtName,edtPassword;
+    //    private Button btnSignIn;
+    private MaterialEditText edtName, edtPassword;
     FirebaseDatabase database;
     DatabaseReference table_user;
 
@@ -31,47 +31,49 @@ public class SignIn extends AppCompatActivity {
 
         edtName = findViewById(R.id.edtNameSignIn);
         edtPassword = findViewById(R.id.edtPasswordSignIn);
-        btnSignIn = findViewById(R.id.btnSignIn1);
+//        btnSignIn = findViewById(R.id.btnSignIn1);
 
         database = FirebaseDatabase.getInstance();
         table_user = database.getReference("User");
 
-        btnSignIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final ProgressDialog dialog = new ProgressDialog(SignIn.this);
-                dialog.setMessage("a");
-                dialog.show();
-                table_user.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        if (dataSnapshot.child(edtName.getText().toString()).exists()){
-                            dialog.dismiss();
-                            User user = dataSnapshot.child(edtName.getText().toString()).getValue(User.class);
-                            user.setName(edtName.getText().toString());
-                            if (user.getPassword().equals(edtPassword.getText().toString()))
-                            {
-                                Toast.makeText(SignIn.this, "tes", Toast.LENGTH_SHORT).show();
-//                               Intent home = new Intent(SignIn.this,Home.class);
-//                                Common.currentUser = user;
-//                                startActivity(home);
-//                                finish();
+//////        btnSignIn.setOnClickListener(new View.OnClickListener() {
+////            @Override
+////            public void onClick(View view) {
+////                final ProgressDialog dialog = new ProgressDialog(SignIn.this);
+////                dialog.setMessage("a");
+////                dialog.show();
+////                table_user.addValueEventListener(new ValueEventListener() {
+////                    @Override
+////                    public void onDataChange(DataSnapshot dataSnapshot) {
+////                        if (dataSnapshot.child(edtName.getText().toString()).exists()){
+////                            dialog.dismiss();
+////                            User user = dataSnapshot.child(edtName.getText().toString()).getValue(User.class);
+////                            user.setName(edtName.getText().toString());
+////                            if (user.getPassword().equals(edtPassword.getText().toString()))
+////                            {
+////                                Toast.makeText(SignIn.this, "tes", Toast.LENGTH_SHORT).show();
+//////                               Intent home = new Intent(SignIn.this,Home.class);
+//////                                Common.currentUser = user;
+//////                                startActivity(home);
+//////                                finish();
+//////
 //
-
-
-                            }else {
-                                Toast.makeText(SignIn.this, "Sign In Failed", Toast.LENGTH_SHORT).show();
-                            }
-                        }
-                    }
-
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
-                        Toast.makeText(SignIn.this, "User Name Tidak Ada di Database", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-            }
-        });
+//
+//                            }else {
+//                                Toast.makeText(SignIn.this, "Sign In Failed", Toast.LENGTH_SHORT).show();
+//                            }
+//                        }
+//                    }
+//
+//                    @Override
+//                    public void onCancelled(DatabaseError databaseError) {
+//                        Toast.makeText(SignIn.this, "User Name Tidak Ada di Database", Toast.LENGTH_SHORT).show();
+//
+//                    }
+//                });
+//            }
+//        });
+//    }
+//}
     }
 }
