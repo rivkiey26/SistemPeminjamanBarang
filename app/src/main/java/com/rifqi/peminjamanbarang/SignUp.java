@@ -39,7 +39,7 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final ProgressDialog dialog = new ProgressDialog(SignUp.this);
-                dialog.setMessage("Mohon Tunggu");
+                dialog.setMessage("Mohon Tunggu...");
                 dialog.show();
 
                 table_user.addValueEventListener(new ValueEventListener() {
@@ -48,7 +48,7 @@ public class SignUp extends AppCompatActivity {
                         if (dataSnapshot.child(edtName.getText().toString()).exists())
                         {
                             dialog.dismiss();
-                            Toast.makeText(SignUp.this, "User Name Sudah Terdaftarrr", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignUp.this, "User Name Sudah Terdaftar", Toast.LENGTH_SHORT).show();
                         }
                         else
                         {
