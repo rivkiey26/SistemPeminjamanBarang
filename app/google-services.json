@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "906619748752",
+    "firebase_url": "https://pinjam-barang-b7bbe.firebaseio.com",
+    "project_id": "pinjam-barang-b7bbe",
+    "storage_bucket": "pinjam-barang-b7bbe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:906619748752:android:f34813f120d08751",
+        "android_client_info": {
+          "package_name": "com.rifqi.peminjamanbarang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "906619748752-b43auv8km43n8uit0t9a16ef96mjc7a0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rifqi.peminjamanbarang",
+            "certificate_hash": "bb115bbf9d5f40653563a452e7b3d47d8452ceb8"
+          }
+        },
+        {
+          "client_id": "906619748752-e5484at6vmhn27g0bhub3tv41a0aqe90.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcItW_DOmrXZCbNnX2bLpKpLgFPSAlJTQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "906619748752-e5484at6vmhn27g0bhub3tv41a0aqe90.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

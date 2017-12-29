@@ -1,0 +1,26 @@
+{
+  "Category" : {
+    "01" : {
+      "Image" : "http://rivkiey.com/foto/drone.jpg",
+      "Name" : "DRONE"
+	   },
+	"02" : {
+	  "Image" : "http://rivkiey.com/foto/kamera.jpg",
+	  "Name"  : "KAMERA"
+	  }
+    },
+  "User": {
+    "Rifqi": {
+		"Phone": "081210260084",
+		"Password": "1234"
+  }
+},
+  "Alat": {
+    "01": {
+      "Name": "Dji Phantom",
+      "Image": "http://rivkiey.com/foto/dji_phantom_4.jpg",
+      "Description": "The sexiest drone that DJI ever designed, welcome to the era of VISION.",    
+      "MenuId": "01"
+    }
+}
+}
