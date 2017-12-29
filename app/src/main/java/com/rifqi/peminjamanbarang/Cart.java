@@ -67,9 +67,7 @@ public class Cart extends AppCompatActivity {
         int total =0;
         for (Pinjam order:cart)
             total+= (Integer.parseInt(order.getQuantity()));
-        Locale locale = new Locale("en","US");
-        NumberFormat fmt = NumberFormat.getCurrencyInstance(locale);
-        txtTotal.setText(fmt.format(total));
+        txtTotal.setText(total);
     }
 
     private void showAlertDialog() {
@@ -98,7 +96,7 @@ public class Cart extends AppCompatActivity {
                 requests.child(String.valueOf(System.currentTimeMillis()))
                         .setValue(request);
                 new Database(getBaseContext()).cleanCart();
-                Toast.makeText(Cart.this, "Thank You", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(Cart.this, "Thank You", Toast.LENGTH_SHORT).show();
                 finish();
             }
         });
