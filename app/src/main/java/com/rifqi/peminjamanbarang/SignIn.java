@@ -51,11 +51,12 @@ public class SignIn extends AppCompatActivity {
                             user.setName(edtName.getText().toString());
                             if (user.getPassword().equals(edtPassword.getText().toString()))
                             {
-                               Intent home = new Intent(SignIn.this,Home.class);
-                                Common.currentUser = user;
-                                startActivity(home);
-                                finish();
-
+                                Toast.makeText(SignIn.this, "tes", Toast.LENGTH_SHORT).show();
+//                               Intent home = new Intent(SignIn.this,Home.class);
+//                                Common.currentUser = user;
+//                                startActivity(home);
+//                                finish();
+//
 
 
                             }else {
