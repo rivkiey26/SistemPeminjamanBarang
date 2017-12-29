@@ -40,7 +40,7 @@ public class SignIn extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 final ProgressDialog dialog = new ProgressDialog(SignIn.this);
-                dialog.setMessage("Mohon Tunggu...");
+                dialog.setMessage("a");
                 dialog.show();
                 table_user.addValueEventListener(new ValueEventListener() {
                     @Override
