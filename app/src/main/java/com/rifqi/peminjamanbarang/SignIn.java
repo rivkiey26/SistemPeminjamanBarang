@@ -39,14 +39,14 @@ public class SignIn extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                final ProgressDialog dialog = new ProgressDialog(SignIn.this);
-//                dialog.setMessage("Mohon Tunggu...");
-//                dialog.show();
+                final ProgressDialog dialog = new ProgressDialog(SignIn.this);
+                dialog.setMessage("Mohon Tunggu...");
+                dialog.show();
                 table_user.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         if (dataSnapshot.child(edtName.getText().toString()).exists()){
-//                            dialog.dismiss();
+                            dialog.dismiss();
                             User user = dataSnapshot.child(edtName.getText().toString()).getValue(User.class);
                             user.setName(edtName.getText().toString());
                             if (user.getPassword().equals(edtPassword.getText().toString()))
